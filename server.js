@@ -21,7 +21,7 @@ app.get('/new/:http//:url',function(req,res){
     var url = req.params.url;
     if(/\./g.test(url)===true&&(http=='http:'||http=='https:')){
         dic[number++] = http+'//'+url;
-        var obj = {original_url:http+'//'+url , short_url: number-1};
+        var obj = {original_url:http+'//'+url , short_url: 'https://freecodecamp-shortenurl.herokuapp.com/'+number-1};
         res.json(obj);
     }
     else{
